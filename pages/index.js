@@ -1,82 +1,77 @@
-import Head from 'next/head'
+import Link from "next/link";
+
+import WithNavbarLayout from "../templates/withNavbar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <div className="bg-gradient-to-br from-indigo-600 to-blue-500 text-white min-h-screen flex items-center px-6 lg:px-32 bg-topography">
+        <header className="w-full absolute left-0 top-0 p-6 lg:p-32 z-10">
+          <div className="flex justify-between">
+            <div>
+              <img
+                alt="FoxInTheBox Logo"
+                className="h-12 md:h-24"
+                src="/img/FoxInTheBox.png"
+              />
+            </div>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+            <div className="flex">
+              <Link
+                href="/about"
+              >
+                <div
+                  className="hidden md:block cursor-pointer focus:outline-none focus:ring focus:ring-green-400 hover:bg-blue-500 text-white hover:text-green-400 h-10 px-3 py-2 rounded-md"
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+                >
+                  <h1 className="text-xl font-semibold">Learn more</h1>
+                </div>
+              </Link>
+              <Link
+                href="/boxes"
+              >
+                <div
+                  className="bg-white ml-6 cursor-pointer hover:bg-green-400 focus:bg-gray-100 focus:outline-none focus:ring focus:ring-green-400  flex space-between h-10 px-3 py-2 rounded-md text-indigo-600 hover:text-indigo-700 text-xl font-bold"
+                >
+                  Start now
+                  <div className="pt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </header>
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <section className="w-full md:w-9/12 xl:w-8/12">
+          <span className="font-bold uppercase tracking-widest text-2xl lg:text-3xl">
+            FoxInTheBox
+          </span>
+          <h1 className="text-6xl md:text-8xl font-bold text-green-400">
+            Solve Fun
+            <br />
+            Challenges
+          </h1>
+          <p className="font-bold mb-1 mt-4 text-2xl lg:text-3xl">
+            Earn prizes and expand your knowledge
+          </p>
+        </section>
+        <div className="absolute right-0 bottom-0 p-6 lg:p-32">
+          <p className="font-bold text-lg tracking-wide mb-1">Yours Truly</p>
+          <p>
+            <span className="font-black">ArcticSpaceFox</span> (Creator)
+          </p>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
+      </div>
   )
 }
