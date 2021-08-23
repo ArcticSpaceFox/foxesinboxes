@@ -9,7 +9,7 @@ export default function Home() {
           <div className="flex justify-between">
             <div>
               <img
-                alt="FoxInTheBox Logo"
+                alt="FoxesInBoxes Logo"
                 className="h-12 md:h-24"
                 src="/img/FoxInTheBox.png"
               />
@@ -55,7 +55,7 @@ export default function Home() {
 
         <section className="w-full md:w-9/12 xl:w-8/12">
           <span className="font-bold uppercase tracking-widest text-2xl lg:text-3xl">
-            FoxInTheBox
+            FoxesInBoxes
           </span>
           <h1 className="text-6xl md:text-8xl font-bold text-green-400">
             Solve Fun

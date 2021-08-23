@@ -150,7 +150,7 @@ const InformationPage = () => {
                 </p>
               </div>
               <div className="text-xl text-gray-600 text-justify mx-6 md:mx-4 my-2">
-                FoxInTheBox uses <span className="font-bold">https</span> by
+                FoxesInBoxes uses <span className="font-bold">https</span> by
                 default. Dont believe me? Well try to type in our URL without
                 the <span className="font-bold">s</span>. You will see that you
                 will automatically get redirected to https. So you can not even

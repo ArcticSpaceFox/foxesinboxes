@@ -4,11 +4,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-2 py-4 sm:px-6 lg:px-8">
         <div className="flex justify-between text-gray-600">
           <div className="">
-            <span>© {new Date().getFullYear()} FoxInTheBox </span>
+            <span>© {new Date().getFullYear()} FoxesInBoxes </span>
           </div>
           <div className="">
             <a
-              href="https://github.com/ArcticSpaceFox/FoxInTheBox"
+              href="https://github.com/ArcticSpaceFox/foxesinboxes"
               className="inline-flex hover:text-indigo-400"
             >
               <svg

@@ -90,11 +90,11 @@ const Navbar = () => {
                 <img
                   className="block lg:mr-2 h-8 w-8 w-auto"
                   src='/img/FoxInTheBox.png'
-                  aria-label="FoxInTheBox Logo"
+                  aria-label="FoxesInBoxes Logo"
                 />
                 <div className="hidden lg:block h-8 w-auto">
                   <h1 className="font-title text-xl pt-1 font-extrabold text-gray-200">
-                    FoxInTheBox
+                    FoxesInBoxes
                   </h1>
                 </div>
               </div>

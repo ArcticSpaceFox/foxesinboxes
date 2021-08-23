@@ -49,7 +49,7 @@ const AboutPage = ({team, contributors}) => {
               Introduction
             </h3>
             <h1 className="hidden sm:block mb-6 text-4xl lg:text-5xl font-extrabold text-gray-800">
-              Welcome to FoxinTheBox
+              Welcome to FoxesInBoxes
             </h1>
             <h1 className="block sm:hidden mb-6 text-4xl font-extrabold text-gray-800">
               Welcome{' '}
@@ -59,7 +59,7 @@ const AboutPage = ({team, contributors}) => {
             </h1>
             <p className="text-xl text-gray-600 text-justify mx-6 md:mx-4">
               You have found you way on{' '}
-              <span className="font-bold">FoxInTheBox</span>! On this page, you
+              <span className="font-bold">FoxesInBoxes</span>! On this page, you
               can prove your skills by solving easy and tricky puzzles. Our
               motivation is education and sharing skills in ethical hacking and
               engineering. We hope that you will learn something! This project
