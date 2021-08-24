@@ -84,7 +84,7 @@ export default function Home({ boxes }) {
           </div>
         </header>
 
-        <section className="w-full lg:flex justify-between">
+        <section className="w-full xl:flex justify-between">
           <div>
             <span className="font-bold uppercase tracking-widest text-2xl lg:text-3xl">
               FoxesInBoxes
@@ -99,7 +99,7 @@ export default function Home({ boxes }) {
             </p>
           </div>
           {boxes[0] && (
-            <div className="hidden max-w-md lg:flex">
+            <div className="hidden max-w-md xl:flex">
               <div className="bg-white min-w-[24rem] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl self-center">
                 <div className="px-8 py-5">
                   <div className="pb-2 mb-2 border-b border-gray-200 flex gap-4">
