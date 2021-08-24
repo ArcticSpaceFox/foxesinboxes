@@ -3,7 +3,7 @@ const Footer = () => {
     <div className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-2 py-4 sm:px-6 lg:px-8">
         <div className="flex justify-between text-gray-600">
-          <div className="">
+          <div className="select-none cursor-default">
             <span>© {new Date().getFullYear()} FoxesInBoxes </span>
           </div>
           <div className="">

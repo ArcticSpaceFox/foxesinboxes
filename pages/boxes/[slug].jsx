@@ -167,14 +167,14 @@ const BoxPage = ({ box }) => {
             </div>
             <div className="mt-8">
               <h1 className="text-xl mb-2 font-bold tracking-wide"><span className="text-indigo-600 mr-1">#</span>Writeup</h1>
-              <p className={"w-full mt-2 border border-gray-200 py-2 px-4 font-mono bg-gray-100 text-justify break-all blur-sm " + (solved && "hidden")}>
+              <p className={"w-full mt-2 border border-gray-200 py-2 px-4 select-none font-mono bg-gray-100 text-justify break-all blur-sm " + (solved && "hidden")}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
               </p>
 
-              {solved && <div className="w-full mx-auto prose xl:prose-lg px-3 py-1 border border-gray-200 bg-gray-100">
+              {solved && <div className="w-full mx-auto prose xl:prose-lg px-3 py-1 select-none border border-gray-200 bg-gray-100">
                 <RichText content={JSON.parse(text)} />
               </div>}
-              <p className="w-full mx-auto text-sm font-light text-gray-700 mt-4 break-all">Publishing the writeup on other platforms is not allowed, as this would ruin the challenge for others. If you wish to improve this please contact us!</p>
+              <p className="w-full mx-auto text-sm font-light select-none text-gray-700 mt-4 break-all">Publishing the writeup on other platforms is not allowed, as this would ruin the challenge for others. If you wish to improve this please contact us!</p>
             </div>
           </div>
         </div>
@@ -205,14 +205,14 @@ const BoxPage = ({ box }) => {
             </div>
             <div className="mt-8">
               <h1 className="text-xl mb-2 font-bold tracking-wide"><span className="text-indigo-600 mr-1">#</span>Writeup</h1>
-              <p className={"w-full mt-2 border border-gray-200 py-2 px-4 font-mono bg-gray-100 text-justify break-all blur-sm " + (solved && "hidden")}>
+              <p className={"w-full mt-2 border border-gray-200 py-2 px-4 font-mono bg-gray-100 select-none cursor-default text-justify break-all blur-sm " + (solved && "hidden")}>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
               </p>
 
-              {solved && <div className="w-full mx-auto prose-sm md:prose xl:prose-lg px-3 py-1 border border-gray-200 bg-gray-100">
+              {solved && <div className="mt-2 mx-auto border border-gray-200 py-2 px-4 font-mono bg-gray-100 text-justify break-words prose-sm md:prose xl:prose-lg">
                 <RichText content={JSON.parse(text)} />
               </div>}
-              <p className="w-full mx-auto text-sm font-light text-gray-700 mt-4 break-all">Publishing the writeup on other platforms is not allowed, as this would ruin the challenge for others. If you wish to improve this please contact us!</p>
+              <p className="w-full mx-auto text-sm font-light select-none text-gray-700 mt-4 break-all">Publishing the writeup on other platforms is not allowed, as this would ruin the challenge for others. If you wish to improve this please contact us!</p>
             </div>
           </div>
 

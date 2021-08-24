@@ -61,7 +61,7 @@ const InfoBanner = () => {
             </div>
             <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
               <Link
-                href="/about"
+                href="/blog"
               >
                 <div
                   className="flex items-center justify-center px-4 py-2 cursor-pointer border border-transparent rounded-md shadow-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50"

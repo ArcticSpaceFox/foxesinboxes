@@ -102,6 +102,7 @@ const Navbar = () => {
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
                 <Navitem href="/boxes" >Boxes</Navitem>
+                <Navitem href="/blog" >Blog</Navitem>
                 <Navitem href="/about" >About</Navitem>
               </div>
             </div>
@@ -196,6 +197,7 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
           <Navitem href="/boxes" cssprops="block">Boxes</Navitem>
+          <Navitem href="/blog" cssprops="block">Blog</Navitem>
           <Navitem href="/about" cssprops="block">About</Navitem>
         </div>
       </div>

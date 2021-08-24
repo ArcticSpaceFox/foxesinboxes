@@ -36,7 +36,7 @@ export default function Home({ boxes }) {
   return (
     <div className="bg-gradient-to-br from-indigo-600 to-blue-500 text-white">
       <div className="min-h-screen flex items-center px-6 lg:px-32 bg-topography">
-        <header className="w-full absolute left-0 top-0 p-6 lg:p-32 z-10">
+        <header className="w-full absolute left-0 top-0 p-6 lg:pt-16 lg:px-32 z-10">
           <div className="flex justify-between">
             <div>
               <img
@@ -126,7 +126,7 @@ export default function Home({ boxes }) {
             </div>
           )}
         </section>
-        <div className="absolute right-0 bottom-0 p-6 lg:p-32">
+        <div className="absolute right-0 bottom-0 p-6 lg:py-16 lg:px-32">
           <p className="font-bold text-lg tracking-wide mb-1">Yours Truly</p>
           <p>
             <span className="font-black">ArcticSpaceFox</span> (Creator)
