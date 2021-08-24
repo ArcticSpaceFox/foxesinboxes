@@ -45,19 +45,19 @@ const AboutPage = ({ team, contributors }) => {
         <div className="max-w-5xl mx-auto px-2 py-4 sm:px-6 lg:px-8">
           {/* About Text here */}
           <div className="mt-8 text-center">
-            <h3 className="mb-2 text-indigo-600 font-semibold tracking-widest uppercase">
+            <h3 className="mb-2 text-indigo-600 dark:text-indigo-400 font-semibold tracking-widest uppercase">
               Introduction
             </h3>
-            <h1 className="hidden sm:block mb-6 text-4xl lg:text-5xl font-extrabold text-gray-800">
+            <h1 className="hidden sm:block mb-6 text-4xl lg:text-5xl font-extrabold text-gray-800 dark:text-gray-200">
               Welcome to FoxesInBoxes
             </h1>
-            <h1 className="block sm:hidden mb-6 text-4xl font-extrabold text-gray-800">
+            <h1 className="block sm:hidden mb-6 text-4xl font-extrabold text-gray-800 dark:text-gray-200">
               Welcome{' '}
               <span role="img" aria-label="wink hand">
                 👋
               </span>
             </h1>
-            <p className="text-xl text-gray-600 text-justify mx-6 md:mx-4">
+            <p className="text-xl text-gray-600 dark:text-gray-400 text-justify mx-6 md:mx-4">
               You have found you way on{' '}
               <span className="font-bold">FoxesInBoxes</span>! On this page, you
               can prove your skills by solving easy and tricky puzzles. Our
@@ -92,14 +92,14 @@ const AboutPage = ({ team, contributors }) => {
       <div className="max-w-7xl mx-auto border-t border-gray-400 border-opacity-40 my-4" />
       <section id="team">
         <div className="max-w-5xl mx-auto px-6 py-4 lg:px-8">
-          <div className="border-l-2 border-indigo-600 pl-4">
-            <h3 className="mb-2 text-indigo-600 font-semibold tracking-widest uppercase">
+          <div className="border-l-2 border-indigo-600 dark:border-indigo-400 pl-4">
+            <h3 className="mb-2 text-indigo-600 dark:text-indigo-400 font-semibold tracking-widest uppercase">
               Behind the Boxes
             </h3>
-            <h1 className="hidden sm:block mb-2 text-4xl lg:text-5xl font-extrabold text-gray-800">
+            <h1 className="hidden sm:block mb-2 text-4xl lg:text-5xl font-extrabold text-gray-800 dark:text-gray-200">
               Meet our Team
             </h1>
-            <h1 className="block sm:hidden mb-2 text-4xl font-extrabold text-gray-800">
+            <h1 className="block sm:hidden mb-2 text-4xl font-extrabold text-gray-800 dark:text-gray-200">
               The Team{' '}
               <span role="img" aria-label="hands presenting">
                 👐
@@ -116,14 +116,14 @@ const AboutPage = ({ team, contributors }) => {
       </section>
       <section id="honor" className="mb-8">
         <div className="max-w-5xl mx-auto px-6 py-4 lg:px-8">
-          <div className="border-l-2 border-indigo-600 pl-4">
-            <h3 className="mb-2 text-indigo-600 font-semibold tracking-widest uppercase">
+          <div className="border-l-2 border-indigo-600 dark:border-indigo-400 pl-4">
+            <h3 className="mb-2 text-indigo-600 dark:text-indigo-400 font-semibold tracking-widest uppercase">
               We helped make this possible
             </h3>
-            <h1 className="hidden sm:block mb-2 text-4xl lg:text-5xl font-extrabold text-gray-800">
+            <h1 className="hidden sm:block mb-2 text-4xl lg:text-5xl font-extrabold text-gray-800 dark:text-gray-200">
               Honorable mentions
             </h1>
-            <h1 className="block sm:hidden mb-2 text-4xl font-extrabold text-gray-800">
+            <h1 className="block sm:hidden mb-2 text-4xl font-extrabold text-gray-800 dark:text-gray-200">
               We helped{' '}
               <span role="img" aria-label="hands presenting">
                 🤙
@@ -144,7 +144,7 @@ const AboutPage = ({ team, contributors }) => {
 
 const TeamCard = ({ name, role, profilePic, socialLink }) => (
   <a
-    className="flex-grow-1 w-full sm:w-1/3 xl:w-1/4 bg-gray-50 rounded-lg shadow-md hover:shadow-2xl transition-shadow overflow-hidden mx-12 mb-4 md:mb-8 cursor-pointer flex flex-col"
+    className="flex-grow-1 w-full sm:w-1/3 xl:w-1/4 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md hover:shadow-2xl transition-shadow overflow-hidden mx-12 mb-4 md:mb-8 cursor-pointer flex flex-col"
     href={socialLink || '#team'}
   >
     <div className="flex-1 flex flex-col justify-center">
@@ -154,9 +154,9 @@ const TeamCard = ({ name, role, profilePic, socialLink }) => (
         className="max-h-32 lg:max-h-64 object-contain mx-auto mt-4"
       />
     </div>
-    <div className="border-t border-gray-400 border-opacity-40 bg-indigo-100 p-2 text-center">
-      <h2 className="sm:text-lg md:text-2xl font-bold text-gray-700">{name}</h2>
-      <p className="md:text-base font-black tracking-wider uppercase text-indigo-600">
+    <div className="border-t border-gray-400 dark:border-gray-600 border-opacity-40 bg-indigo-100 dark:bg-gray-800 p-2 text-center">
+      <h2 className="sm:text-lg md:text-2xl font-bold text-gray-700 dark:text-gray-300">{name}</h2>
+      <p className="md:text-base font-black tracking-wider uppercase text-indigo-600 dark:text-indigo-400">
         {role}
       </p>
     </div>
@@ -165,7 +165,7 @@ const TeamCard = ({ name, role, profilePic, socialLink }) => (
 
 const ContribCard = ({ name, profilePic, role, socialLink }) => (
   <a href={socialLink || '#honor'}>
-    <div className="hidden md:flex flex-col p-4 bg-white rounded-3xl overflow-hidden w-full max-w-xs md:flex-row hover:shadow-lg hover:bg-indigo-100 transition-shadow">
+    <div className="hidden md:flex flex-col p-4 bg-white dark:bg-gray-700 rounded-3xl overflow-hidden w-full max-w-xs md:flex-row hover:shadow-lg hover:bg-indigo-100 transition-shadow">
       <img
         className="h-20 w-20 rounded-full"
         src={profilePic?.url || "/img/Blue.png"}
@@ -173,7 +173,7 @@ const ContribCard = ({ name, profilePic, role, socialLink }) => (
       ></img>
       <div className="flex flex-col space-y-4">
         <div className="flex flex-col items-center md:items-start md:ml-4">
-          <h2 className="text-xl font-medium">{name}</h2>
+          <h2 className="text-xl font-medium dark:text-white">{name}</h2>
           <p className="text-base font-medium text-gray-400">{role || ''}</p>
         </div>
       </div>

@@ -1,8 +1,8 @@
 # FIB Features v2.1
 
 - [x] Homepage UI
-- [ ] dark mode
-- [ ] blog
+- [x] blog
+- [x] dark mode
 
 # FIB Feautues v2.2
 

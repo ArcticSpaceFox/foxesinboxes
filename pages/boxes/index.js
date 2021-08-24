@@ -59,16 +59,16 @@ const BoxesPage = ({ boxes }) => {
             <table className="min-w-full leading-normal table-auto">
               <thead>
                 <tr>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                  <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
 
                   </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                  <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
                     Box name
                   </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                  <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
                     Description
                   </th>
-                  <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                  <th className="px-5 py-3 border-b-2 border-gray-200 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider">
                     Created at
                   </th>
                 </tr>
@@ -79,8 +79,8 @@ const BoxesPage = ({ boxes }) => {
                 ))}
               </tbody>
             </table>
-            <div className="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
-              <span className="text-xs xs:text-sm text-gray-900">
+            <div className="px-5 py-5 bg-white dark:bg-gray-700 border-t flex flex-col xs:flex-row items-center xs:justify-between">
+              <span className="text-xs xs:text-sm text-gray-900 dark:text-gray-400">
                 Showing {pager * maxBoxesPage + 1} to {pager * maxBoxesPage + maxBoxesPage} of {boxes.length}{' '}
                 Entries
               </span>
@@ -89,8 +89,8 @@ const BoxesPage = ({ boxes }) => {
                   onClick={() => setPager(pager == 0 ? pager : pager - 1)}
                   disabled={pager == 0}
                   className={`text-sm ${pager != 0
-                    ? 'bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold'
-                    : 'bg-gray-100 text-gray-300'
+                    ? 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-400 font-semibold'
+                    : 'bg-gray-100 dark:bg-gray-900 text-gray-300 dark:text-gray-600'
                     } py-2 px-4 rounded-l`}
                 >
                   Prev
@@ -101,8 +101,8 @@ const BoxesPage = ({ boxes }) => {
                   }
                   disabled={boxes.length <= pager * maxBoxesPage + 19}
                   className={`text-sm ${boxes.length > pager * maxBoxesPage + maxBoxesPage
-                    ? 'bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold'
-                    : 'bg-gray-100 text-gray-300'
+                    ? 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-400 font-semibold'
+                    : 'bg-gray-100 dark:bg-gray-900 text-gray-300 dark:text-gray-600'
                     } py-2 px-4 rounded-r`}
                 >
                   Next
@@ -122,12 +122,12 @@ const MobileCardItem = ({ boxname, boxslug, teaser, boxLogo, createdAt }) => {
   return (
     <Link href={"boxes/" + boxslug} >
 
-      <div className="border border-gray-300 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow bg-white">
-        <h2 className="text-xl font-medium title-font mb-2 truncate">{boxname}</h2>
-        <p className="leading-relaxed text-base truncate">{teaser}</p>
+      <div className="border border-gray-300 dark:border-gray-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow bg-white dark:bg-gray-700">
+        <h2 className="text-xl font-medium title-font mb-2 truncate dark:text-gray-200">{boxname}</h2>
+        <p className="leading-relaxed text-base truncate dark:text-gray-400">{teaser}</p>
 
         <div className="text-center mt-2 leading-none flex justify-between w-full">
-          <span className=" mr-3 inline-flex items-center leading-none text-sm  py-1 ">
+          <span className="mr-3 inline-flex items-center leading-none text-sm  py-1 dark:text-gray-400">
             <svg
               className=" fill-current w-4 h-4 mr-2 text-blue-500"
               xmlns="http://www.w3.org/maxBoxesPage00/svg"
@@ -153,23 +153,23 @@ const TableItem = ({ boxname, boxslug, teaser, boxLogo, createdAt }) => {
   return (
     <Link href={"boxes/" + boxslug}>
       <tr className="group cursor-pointer">
-        <td className="px-5 py-5 border-b border-gray-200  group-hover:bg-indigo-100 bg-white text-sm">
+        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700  group-hover:bg-indigo-100 dark:group-hover:bg-indigo-600 bg-white dark:bg-gray-600 text-sm">
           <img
             className="h-8 w-8 rounded-full object-contain"
             alt="Box logo"
             src={boxLogo?.url || "/img/FoxInTheBox.png"}
           />
         </td>
-        <td className="px-5 py-5 border-b border-gray-200 group-hover:bg-indigo-100 bg-white text-sm">
-          <p className="text-gray-900 whitespace-no-wrap font-mono truncate">
+        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700 group-hover:bg-indigo-100 dark:group-hover:bg-indigo-600 bg-white dark:bg-gray-600 text-sm">
+          <p className="text-gray-900 dark:text-gray-100 whitespace-no-wrap font-mono truncate">
             {boxname}
           </p>
         </td>
-        <td className="px-5 py-5 border-b border-gray-200  group-hover:bg-indigo-100 bg-white text-sm">
-          <p className="text-gray-900 whitespace-no-wrap">{teaser || "This box is a mystery"}</p>
+        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700  group-hover:bg-indigo-100 dark:group-hover:bg-indigo-600 bg-white dark:bg-gray-600 text-sm">
+          <p className="text-gray-900 dark:text-gray-100 whitespace-no-wrap">{teaser || "This box is a mystery"}</p>
         </td>
-        <td className="px-5 py-5 border-b border-gray-200  group-hover:bg-indigo-100 bg-white text-sm">
-          <p className="text-gray-900 whitespace-no-wrap">
+        <td className="px-5 py-5 border-b border-gray-200 dark:border-gray-700  group-hover:bg-indigo-100 dark:group-hover:bg-indigo-600 bg-white dark:bg-gray-600 text-sm">
+          <p className="text-gray-900 dark:text-gray-100 whitespace-no-wrap">
             {new Date(createdAt).toLocaleString()}
           </p>
         </td>

@@ -51,13 +51,13 @@ const Blog = ({ posts }) => {
 
   return (
     <WithNavbarLayout>
-      <div className="mt-16 w-full max-w-5xl mx-auto px-2 py-4 sm:px-6 lg:px-8">
+      <div className="mt-16 w-full max-w-5xl mx-auto px-2 py-4 sm:px-6 lg:px-8 space-y-4">
 
-        <div className="pb-4 border-b border-gray-300">
-          <h1 className="text-6xl font-extrabold mb-4">All Posts</h1>
+        <div className="pb-4 border-b border-gray-300 dark:border-gray-600">
+          <h1 className="text-6xl font-extrabold mb-4 dark:text-gray-200">All Posts</h1>
           <div className="relative flex w-full flex-wrap items-stretch mb-3 max-w-xl">
-            <input type="text" placeholder="Search articles..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-3 placeholder-gray-300 text-gray-600 font-medium relative bg-white rounded-lg text-sm border border-gray-300 outline-none focus:outline-none focus:ring w-full pr-10" />
-            <span className="z-10 h-full leading-snug font-normal absolute text-center text-gray-300 bg-transparent rounded-lg text-base items-center justify-center w-8 right-0 pr-3 py-3">
+            <input type="text" placeholder="Search articles..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-3 placeholder-gray-300 dark:placeholder-gray-600 text-gray-600 dark:text-gray-400 font-medium relative bg-white dark:bg-gray-800 rounded-lg text-sm border border-gray-300 dark:border-gray-700 outline-none focus:outline-none focus:ring dark:ring-indigo-600 w-full pr-10" />
+            <span className="z-10 h-full leading-snug font-normal absolute text-center text-gray-300 dark:text-gray-600 bg-transparent rounded-lg text-base items-center justify-center w-8 right-0 pr-3 py-3">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -65,7 +65,7 @@ const Blog = ({ posts }) => {
           </div>
         </div>
 
-        <div className="mt-4 w-full grid grid-cols-3">
+        <div className="mt-4 w-full md:grid grid-cols-3">
           {filteredPosts.map((p, i) => <PostComponent post={p} key={i} onClick={t => setSearchQuery(t.name)} />)}
         </div>
 
@@ -76,17 +76,17 @@ const Blog = ({ posts }) => {
 
 const PostComponent = ({ post, onClick }) => (
   <>
-    <p className="text-gray-600 tracking-wide">{moment(post.createdAt).format("MMM DD, YYYY")}</p>
+    <p className="text-gray-600 dark:text-gray-500 tracking-wide mb-2">{moment(post.createdAt).format("MMM DD, YYYY")}</p>
     <div className="col-span-2">
       <Link href={"/blog/" + post.slug}>
-        <h1 className="text-2xl font-bold cursor-pointer">{post.title}</h1>
+        <h1 className="text-2xl font-bold cursor-pointer dark:text-gray-200">{post.title}</h1>
       </Link>
-      <div className="text-indigo-400 flex gap-4 flex-wrap">
+      <div className="text-indigo-400 dark:text-indigo-500 flex gap-4 flex-wrap">
         {post.tags.map((t, i) =>
           <p key={i} onClick={() => onClick(t)} className="cursor-pointer hover:text-indigo-600">{t.name}</p>
         )}
       </div>
-      <p className="mt-2 text-gray-600">{post.teaser}</p>
+      <p className="mt-2 text-gray-600 dark:text-gray-500">{post.teaser}</p>
     </div>
   </>
 )

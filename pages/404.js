@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 export default () => (
   <main>
-    <div className="h-screen w-screen bg-gradient-to-br from-gray-100 to-gray-200  flex items-center justify-center">
-      <div className="container flex flex-col md:flex-row justify-center items-center px-5 text-gray-700">
+    <div className="h-screen w-screen bg-gradient-to-br from-gray-100 dark:from-gray-900 to-gray-200 dark:to-gray-800  flex items-center justify-center">
+      <div className="container flex flex-col md:flex-row justify-center items-center px-5 text-gray-700 dark:text-gray-300">
         <div className="max-w-md">
           <img
             alt="Arctic fox pixel version bouncing up and down"
@@ -24,7 +24,7 @@ export default () => (
             href="/"
           >
             <div
-              className="px-4 inline py-2 text-sm font-medium leading-5 cursor-pointer shadow text-white transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-indigo-600 active:bg-blue-600 hover:bg-indigo-700"
+              className="px-4 inline py-2 text-sm font-medium leading-5 cursor-pointer shadow text-white dark:text-indigo-900 transition-colors duration-150 border border-transparent rounded-lg focus:outline-none focus:shadow-outline-blue bg-indigo-600 dark:bg-indigo-400 hover:bg-indigo-700 dark:hover:bg-indigo-600 dark:hover:text-white"
             >
               back to homepage
             </div>
