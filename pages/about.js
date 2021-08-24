@@ -40,7 +40,7 @@ const AboutPage = ({ team, contributors }) => {
   // Page UI
   return (
     <Layout>
-      <Header role="About" />
+      <Header title="About" />
       <section id="introduction">
         <div className="max-w-5xl mx-auto px-2 py-4 sm:px-6 lg:px-8">
           {/* About Text here */}
