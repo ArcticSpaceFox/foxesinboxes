@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
   }
 }
 
-const AboutPage = ({team, contributors}) => {
+const AboutPage = ({ team, contributors }) => {
   // Page UI
   return (
     <Layout>
@@ -144,14 +144,16 @@ const AboutPage = ({team, contributors}) => {
 
 const TeamCard = ({ name, role, profilePic, socialLink }) => (
   <a
-    className="flex-grow-1 w-full sm:w-1/3 xl:w-1/4 bg-gray-50 rounded-lg shadow-md hover:shadow-2xl transition-shadow overflow-hidden mx-12 mb-4 md:mb-8 cursor-pointer"
+    className="flex-grow-1 w-full sm:w-1/3 xl:w-1/4 bg-gray-50 rounded-lg shadow-md hover:shadow-2xl transition-shadow overflow-hidden mx-12 mb-4 md:mb-8 cursor-pointer flex flex-col"
     href={socialLink || '#team'}
   >
-    <img
-      src={profilePic?.url || "/img/Blue.png"}
-      alt={`${name} , ${role}`}
-      className="h-32 w-32 lg:h-64 lg:w-64 mx-auto pt-4 px-4"
-    />
+    <div className="flex-1 flex flex-col justify-center">
+      <img
+        src={profilePic?.url || "/img/Blue.png"}
+        alt={`${name} , ${role}`}
+        className="max-h-32 lg:max-h-64 object-contain mx-auto mt-4"
+      />
+    </div>
     <div className="border-t border-gray-400 border-opacity-40 bg-indigo-100 p-2 text-center">
       <h2 className="sm:text-lg md:text-2xl font-bold text-gray-700">{name}</h2>
       <p className="md:text-base font-black tracking-wider uppercase text-indigo-600">
