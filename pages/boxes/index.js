@@ -117,14 +117,12 @@ const BoxesPage = ({ boxes }) => {
 }
 
 const MobileCardItem = ({ boxname, boxslug, teaser, boxLogo, createdAt }) => {
-  const difficulty = "BEGINNER";
-
   return (
     <Link href={"boxes/" + boxslug} >
 
-      <div className="border border-gray-300 dark:border-gray-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow bg-white dark:bg-gray-700">
+      <div className="border border-gray-300 dark:border-gray-600 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow bg-white dark:bg-gray-700 overflow-hidden">
         <h2 className="text-xl font-medium title-font mb-2 truncate dark:text-gray-200">{boxname}</h2>
-        <p className="leading-relaxed text-base truncate dark:text-gray-400">{teaser}</p>
+        <p className="leading-relaxed text-base dark:text-gray-400 break-words">{teaser}</p>
 
         <div className="text-center mt-2 leading-none flex justify-between w-full">
           <span className="mr-3 inline-flex items-center leading-none text-sm  py-1 dark:text-gray-400">
