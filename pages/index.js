@@ -120,7 +120,7 @@ export default function Home({ boxes }) {
                 <div className="bg-indigo-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-600 w-full flex items-center">
                   <p className="w-1/2 text-gray-500 py-3 px-8">Interested?</p>
                   <Link href={"/boxes/" + boxes[0].boxslug}>
-                    <a className="w-1/2 py-3 flex justify-center items-center text-gray-700 dark:text-gray-300 hover:text-white hover:bg-green-400 dark:hover:bg-green-600">
+                    <a className="w-1/2 py-3 flex justify-center items-center border-l border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:text-white hover:bg-green-400 dark:hover:bg-green-600">
                       More
                       <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

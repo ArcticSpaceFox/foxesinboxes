@@ -6,8 +6,6 @@ const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT, {
   }
 });
 
-import Image from 'next/image'
-
 import Header from '../organisms/header.jsx'
 import Layout from '../templates/withNavbar.jsx'
 
@@ -167,9 +165,7 @@ const TeamCard = ({ name, role, profilePic, socialLink }) => (
 const ContribCard = ({ name, profilePic, role, socialLink }) => (
   <a href={socialLink || '#honor'}>
     <div className="hidden md:flex flex-col p-4 bg-white dark:bg-gray-700 rounded-3xl overflow-hidden w-full max-w-xs md:flex-row hover:shadow-lg hover:bg-indigo-100 transition-shadow">
-      <Image
-        height="80px"
-        width="80px"
+      <img
         className="h-20 w-20 rounded-full"
         src={profilePic?.url || "/img/Blue.png"}
         alt={name}
