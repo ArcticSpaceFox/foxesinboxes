@@ -8,6 +8,7 @@ const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT, {
 
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import WithNavbarLayout from '../../templates/withNavbar';
 import { RichText } from "@graphcms/rich-text-react-renderer";
@@ -112,7 +113,10 @@ const BlogPost = ({ post, last }) => {
             </Link>
             {/* Author info */}
             <div className="hidden sm:flex items-center">
-              <img className="h-12 w-12 mr-2 rounded-full" src={post.author.profilePic?.url || "/img/Blue.png"} />
+              <img 
+                className="h-12 w-12 mr-2 rounded-full" 
+                src={post.author.profilePic?.url || "/img/Blue.png"} 
+              />
               <p className="text-lg text-gray-900 dark:text-gray-200">{post.author.name}</p>
             </div>
           </div>
@@ -125,7 +129,10 @@ const BlogPost = ({ post, last }) => {
         <div className="hidden lg:block">
           {/* Author info */}
           <div className="flex items-center pb-6 border-b border-gray-300 dark:border-gray-700">
-            <img className="h-12 w-12 mr-2 rounded-full" src={post.author.profilePic?.url || "/img/Blue.png"} />
+            <img
+              className="h-12 w-12 mr-2 rounded-full" 
+              src={post.author.profilePic?.url || "/img/Blue.png"} 
+            />
             <p className="text-lg text-gray-900 dark:text-gray-200">{post.author.name}</p>
           </div>
           {/* Tags */}

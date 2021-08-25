@@ -1,11 +1,14 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default () => (
   <main>
     <div className="h-screen w-screen bg-gradient-to-br from-gray-100 dark:from-gray-900 to-gray-200 dark:to-gray-800  flex items-center justify-center">
       <div className="container flex flex-col md:flex-row justify-center items-center px-5 text-gray-700 dark:text-gray-300">
         <div className="max-w-md">
-          <img
+          <Image
+            height="128"
+            width="128"
             alt="Arctic fox pixel version bouncing up and down"
             className="mb-4 h-44 mx-auto md:hidden"
             src="/img/ArcticFoxPixel.gif"
@@ -31,7 +34,9 @@ export default () => (
           </Link>
         </div>
         <div className="hidden md:block max-w-lg my-8 md:my-0">
-          <img
+          <Image
+            height="256px"
+            width="256px"
             alt="Arctic fox pixel version hopping up and down"
             src="/img/ArcticFoxPixel.gif"
           />

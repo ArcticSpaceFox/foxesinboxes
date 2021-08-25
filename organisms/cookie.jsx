@@ -1,5 +1,6 @@
 import { useState, useEffect, createRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Foxes = ['/img/FoxCookieFen.png', '/img/fitb_cookie.png', '/img/fitb_cookie_fox.png'];
 
@@ -43,7 +44,9 @@ const Cookie = () => {
             <div className="md:flex md:items-start md:flex-col">
               <div className="mx-auto flex-shrink-0 flex items-center justify-center h-38 w-38 rounded-full sm:h-64 sm:w-64">
                 {/* Foxes[Math.floor(Math.random() * Foxes.length)] */}
-                <img
+                <Image
+                  width="256px"
+                  height="256px"
                   src={Foxes[Math.floor(Math.random() * Foxes.length)]} 
                   alt="Fox holding a cookie"
                 />

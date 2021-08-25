@@ -7,6 +7,7 @@ const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT, {
 });
 
 import Link from "next/link";
+import Image from 'next/image'
 
 export async function getStaticProps(context) {
   const { boxes } = await graphcms.request(
@@ -39,7 +40,9 @@ export default function Home({ boxes }) {
         <header className="w-full absolute left-0 top-0 p-6 lg:pt-16 lg:px-32 z-10">
           <div className="flex justify-between">
             <div>
-              <img
+              <Image
+                height="96px"
+                width="96px"
                 alt="FoxesInBoxes Logo"
                 className="h-12 md:h-24"
                 src="/img/FoxInTheBox.png"
@@ -103,7 +106,10 @@ export default function Home({ boxes }) {
               <div className="bg-white dark:bg-gray-700 min-w-[24rem] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl self-center">
                 <div className="px-8 py-5">
                   <div className="pb-2 mb-2 border-b border-gray-200 dark:border-gray-600 flex gap-4">
-                    <img className="h-14 w-14" src={boxes[0].boxLogo?.url || "/img/FoxInTheBox.png"} />
+                    <img 
+                      className="h-14 w-14" 
+                      src={boxes[0].boxLogo?.url || "/img/FoxInTheBox.png"} 
+                    />
                     <div>
                       <h2 className="text-gray-500 font-light uppercase tracking-wide text-xl">Newest box</h2>
                       <h1 className="text-gray-800 dark:text-gray-200 font-bold tracking-wide text-2xl">{boxes[0].boxname}</h1>

@@ -76,17 +76,27 @@ const Blog = ({ posts }) => {
 
 const PostComponent = ({ post, onClick }) => (
   <>
-    <p className="text-gray-600 dark:text-gray-500 tracking-wide mb-2">{moment(post.createdAt).format("MMM DD, YYYY")}</p>
+    <div className="flex sm:block justify-between items-center">
+      <p className="text-gray-600 dark:text-gray-500 tracking-wide mb-2">{moment(post.createdAt).format("MMM DD, YYYY")}</p>
+      <Link href={"/blog/"+post.slug}>
+        <a className="flex items-center text-indigo-400 dark:text-indigo-600 hover:text-indigo-600 dark:hover:text-indigo-400">
+          READ
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </Link>
+    </div>
     <div className="col-span-2">
       <Link href={"/blog/" + post.slug}>
         <h1 className="text-2xl font-bold cursor-pointer dark:text-gray-200">{post.title}</h1>
       </Link>
-      <div className="text-indigo-400 dark:text-indigo-500 flex gap-4 flex-wrap">
+      <div className="text-indigo-400 dark:text-indigo-600 hover:text-indigo-600 dark:hover:text-indigo-400 flex gap-4 flex-wrap">
         {post.tags.map((t, i) =>
-          <p key={i} onClick={() => onClick(t)} className="cursor-pointer hover:text-indigo-600">{t.name}</p>
+          <p key={i} onClick={() => onClick(t)} className="cursor-pointer">{t.name}</p>
         )}
       </div>
-      <p className="mt-2 text-gray-600 dark:text-gray-500">{post.teaser}</p>
+      <p className="mt-2 text-gray-600 dark:text-gray-500 text-justify break-words">{post.teaser}</p>
     </div>
   </>
 )

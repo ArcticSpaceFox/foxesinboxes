@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
 import { useRouter } from 'next/router'
 import { useState, useRef, useEffect } from 'react'
 import { useTheme } from 'next-themes'
@@ -89,8 +91,10 @@ const Navbar = () => {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <Link href="/">
               <div className="flex-shrink-0 flex items-center cursor-pointer">
-                <img
-                  className="block lg:mr-2 h-8 w-8 w-auto"
+                <Image
+                  className="block lg:mr-2 h-8 w-8"
+                  width="32px"
+                  height="32px"
                   src='/img/FoxInTheBox.png'
                   aria-label="FoxesInBoxes Logo"
                 />
@@ -135,8 +139,10 @@ const Navbar = () => {
                 >
                   <span className="sr-only">Open user menu</span>
                   {/* TODO: add user logo img stuff here */}
-                  <img
+                  <Image
                     alt="Profile"
+                    width="32px"
+                    height="32px"
                     className="h-8 w-8 rounded-full object-cover"
                     src={getAvatarImage({ avatar: "BLUE" })}
                   />

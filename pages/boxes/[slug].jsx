@@ -9,6 +9,7 @@ const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT, {
 import crypto from 'crypto-js'
 
 import Head from 'next/head'
+import Image from 'next/image'
 import { useState, useEffect } from 'react';
 
 import WithNavbarLayout from '../../templates/withNavbar';

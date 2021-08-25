@@ -9,6 +9,7 @@ const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT, {
 import { useState } from 'react'
 import Link from 'next/link'
 import moment from "moment";
+import Image from 'next/link'
 
 import Header from '../../organisms/header'
 import Layout from '../../templates/withNavbar'
@@ -136,7 +137,7 @@ const MobileCardItem = ({ boxname, boxslug, teaser, boxLogo, createdAt }) => {
             {moment(createdAt.toString()).format('DD-MM-YYYY')}
           </span>
           <span className=" inline-flex items-center leading-none text-sm">
-            <img 
+            <img
               className="h-8 w-8 rounded-full object-contain"
               src={boxLogo?.url || "/img/FoxInTheBox.png"}
             />

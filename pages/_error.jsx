@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 function Error({ statusCode }) {
   return (
@@ -6,7 +7,9 @@ function Error({ statusCode }) {
       <div className="h-screen w-screen bg-gradient-to-br from-gray-100 to-gray-200  flex items-center justify-center">
         <div className="container flex flex-col md:flex-row justify-center items-center px-5 text-gray-700">
           <div className="max-w-lg my-8 md:my-0 md:mr-8">
-            <img
+            <Image
+              height="256px"
+              width="256px"
               alt="Confused looking fox"
               className="h-56 md:h-52"
               src="/img/FoxConfused.png"

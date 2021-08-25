@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import Navbar from '../organisms/navbar'
 import Footer from '../organisms/footer'
 
@@ -43,7 +45,9 @@ const InformationPage = () => {
                       we do what we do
                     </li>
                   </ul>
-                  <img
+                  <Image
+                    height="192px"
+                    width="192px"
                     className="h-32 md:h-48 mt-6 sm:mt-0"
                     src="/img/PoliceFox.png"
                     alt="Police Fox"
