@@ -76,7 +76,7 @@ const Blog = ({ posts }) => {
 
 const PostComponent = ({ post, onClick }) => (
   <>
-    <div className="flex sm:block justify-between items-center">
+    <div className="flex sm:block justify-between items-center pt-2">
       <p className="text-gray-600 dark:text-gray-500 tracking-wide mb-2">{moment(post.createdAt).format("MMM DD, YYYY")}</p>
       <Link href={"/blog/"+post.slug}>
         <a className="flex items-center text-indigo-400 dark:text-indigo-600 hover:text-indigo-600 dark:hover:text-indigo-400">
@@ -87,7 +87,7 @@ const PostComponent = ({ post, onClick }) => (
         </a>
       </Link>
     </div>
-    <div className="col-span-2">
+    <div className="col-span-2 pb-6">
       <Link href={"/blog/" + post.slug}>
         <h1 className="text-2xl font-bold cursor-pointer dark:text-gray-200">{post.title}</h1>
       </Link>
