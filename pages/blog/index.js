@@ -13,11 +13,11 @@ import { useRouter } from "next/router";
 import WithNavbarLayout from '../../templates/withNavbar';
 import { useState } from 'react';
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const { blogPosts } = await graphcms.request(
     `
     {
-      blogPosts {
+      blogPosts(orderBy: createdAt_DESC) {
         title
         slug
         teaser

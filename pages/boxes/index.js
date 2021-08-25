@@ -18,7 +18,7 @@ export async function getStaticProps(context) {
   const { boxes } = await graphcms.request(
     `
     {
-      boxes {
+      boxes(orderBy: createdAt_DESC) {
         boxname
         boxslug
         teaser
