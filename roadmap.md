@@ -9,6 +9,7 @@
 - [ ] searching boxes
 - [ ] accounts
 - [ ] leaderboard
+- [ ] opengraph
 
 # FIB Features v2.3
 

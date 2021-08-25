@@ -13,6 +13,7 @@ import Image from 'next/image'
 import WithNavbarLayout from '../../templates/withNavbar';
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import moment from 'moment';
+import RichTextViewer from "../../organisms/richtextviewer";
 
 export async function getStaticProps({ params }) {
   let { blogPost, blogPosts } = await graphcms.request(
@@ -161,8 +162,8 @@ const BlogPost = ({ post, last }) => {
             </Link>
           </div>
         </div>
-        <div className="col-span-4 w-full prose-sm md:prose-lg max-w-full dark:text-gray-300">
-          <RichText content={post.content.json} />
+        <div className="col-span-4 w-full">
+          <RichTextViewer content={post.content.json} />
         </div>
       </div>
     </WithNavbarLayout>

@@ -209,7 +209,7 @@ const Navitem = ({href, children, cssprops}) => {
 
   return (
     <Link href={href}>
-      <a className={(asPath === href ? "bg-gray-900 dark:bg-gray-800 text-indigo-400" : "text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-600 hover:text-white") + " px-3 py-2 rounded-md text-sm font-medium " + cssprops}>
+      <a className={(asPath.includes(href) ? "bg-gray-900 dark:bg-gray-800 text-indigo-400" : "text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-600 hover:text-white") + " px-3 py-2 rounded-md text-sm font-medium " + cssprops}>
         {children}
       </a>
     </Link>
