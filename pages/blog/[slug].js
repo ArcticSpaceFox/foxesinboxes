@@ -11,12 +11,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import WithNavbarLayout from '../../templates/withNavbar';
-import { RichText } from "@graphcms/rich-text-react-renderer";
 import moment from 'moment';
 import RichTextViewer from "../../organisms/richtextviewer";
 
 export async function getStaticProps({ params }) {
-  let { blogPost, blogPosts } = await graphcms.request(
+  let { blogPost } = await graphcms.request(
     `
     query BlogPost($slug: String!) {
       blogPost(where: {
@@ -39,18 +38,25 @@ export async function getStaticProps({ params }) {
           name
         }
       }
-      blogPosts(last: 1, where: {
-        NOT: {
-          slug: $slug
-        }
-      }) {
-        title
-        slug
-      }
     }
     `,
     {
       "slug": params.slug
+    }
+  );
+
+  let { blogPosts } = await graphcms.request(
+    `
+    query blogPosts($ts: DateTime!){
+      blogPosts(orderBy: createdAt_DESC, where: {createdAt_lt: $ts}) {
+        title
+        slug
+        createdAt
+      }
+    }
+    `,
+    {
+      "ts": blogPost.createdAt
     }
   );
 
@@ -84,6 +90,7 @@ export async function getStaticPaths() {
 }
 
 const BlogPost = ({ post, last }) => {
+
   return (
     <WithNavbarLayout>
       <Head>
@@ -146,8 +153,8 @@ const BlogPost = ({ post, last }) => {
           {/* Previous */}
           {last.length > 0 && <div className="mt-6 pb-6 border-b border-gray-300 dark:border-gray-700">
             <p className="text-gray-500">PREVIOUS ARTICLE</p>
-            <Link href={"/blog/" + last.slug}>
-              <p className="text-indigo-400 dark:text-indigo-600 hover:text-indigo-600 dark:hover:text-indigo-400">{last.title}</p>
+            <Link href={"/blog/" + last[0].slug}>
+              <p className="text-indigo-400 dark:text-indigo-600 hover:text-indigo-600 dark:hover:text-indigo-400 cursor-pointer">{last[0].title}</p>
             </Link>
           </div>}
           {/* BackToBlogLink */}
