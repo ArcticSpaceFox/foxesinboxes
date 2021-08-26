@@ -8,7 +8,6 @@ const graphcms = new GraphQLClient(process.env.GRAPHQL_URL_ENDPOINT, {
 
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 
 import WithNavbarLayout from '../../templates/withNavbar';
 import moment from 'moment';
@@ -86,7 +85,7 @@ export async function getStaticPaths() {
       },
     })),
     fallback: false,
-  }
+  } 
 }
 
 const BlogPost = ({ post, last }) => {
